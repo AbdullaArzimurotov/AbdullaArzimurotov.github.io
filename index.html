@@ -4,30 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Абдулла Арзимуротов - Портфолио</title>
+    
+    <!-- Yangi shriftni Google Fonts'dan ulaymiz -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Ikonkalar uchun Font Awesome kutubxonasini ulaymiz -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    
+    <!-- O'zimizning CSS faylimiz -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
-        <h1>Абдулла Арзимуротов</h1>
-        <p>Студент направления "Программная инженерия"</p>
-    </header>
+    <div class="container">
+        <!-- 1. BOSH QISM (HEADER) -->
+        <header class="profile">
+            <img src="https://avatars.githubusercontent.com/u/115599547?v=4" alt="Абдулла Арзимуротов" class="profile-img">
+            <h1>Абдулла Арзимуротов</h1>
+            <p class="profile-title">Студент направления "Программная инженерия"</p>
+            
+            <!-- Ijtimoiy tarmoqlar uchun havolalar -->
+            <div class="social-links">
+                <a href="https://github.com/AbdullaArzimurotov" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="mailto:aarzimurotov2001@gmail.com"><i class="fas fa-envelope"></i></a>
+                <!-- Bu yerga Telegram va LinkedIn havolalarini qo'shishing mumkin -->
+                <!-- <a href="#" target="_blank"><i class="fab fa-telegram"></i></a> -->
+                <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+            </div>
+        </header>
 
-    <main>
-        <section>
-            <h2>Основная информация</h2>
-            <ul>
-                <li><strong>Возраст:</strong> 23 года</li>
-                <li><strong>Гражданство:</strong> Республика Узбекистан</li>
-                <li><strong>Университет:</strong> Муромский институт (филиал) Владимирского государственного университета</li>
-                <li><strong>Курс:</strong> 3</li>
-                <li><strong>Направление:</strong> Программная инженерия</li>
-            </ul>
-        </section>
-    </main>
+        <main>
+            <!-- 2. MEN HAQIMDA QISMI -->
+            <section class="card">
+                <h2><i class="fas fa-user-circle"></i> Обо мне</h2>
+                <p>
+                    Я целеустремленный студент 3-го курса, увлеченный разработкой программного обеспечения и решением сложных задач. 
+                    В настоящее время углубляюсь в изучение C# и стремлюсь стать квалифицированным разработчиком.
+                </p>
+            </section>
+            
+            <!-- 3. KO'NIKMALAR (SKILLS) QISMI -->
+            <section class="card">
+                <h2><i class="fas fa-code"></i> Ключевые навыки</h2>
+                <div class="skills-grid">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>C#</span>
+                    <span>Kotlin</span>
+                    <span>Git & GitHub</span>
+                    <span>PL/SQL</span>
+                    <span>React</span>
+                </div>
+            </section>
+
+            <!-- 4. LOYIHALAR (PROJECTS) QISMI -->
+            <section class="card">
+                <h2><i class="fas fa-project-diagram"></i> Мои проекты</h2>
+                <div class="projects-grid">
+                    <!-- Har bir loyiha uchun shunday "project-card" yaratamiz -->
+                    <div class="project-card">
+                        <h3>Kotlin-Translator-Coursework</h3>
+                        <p>Курсовая работа по дисциплине "Теория автоматов и формальных языков".</p>
+                        <div class="project-tags">
+                            <span>Kotlin</span>
+                            <span>C#</span>
+                        </div>
+                        <a href="https://github.com/AbdullaArzimurotov/Kotlin-Translator-Coursework-yoki-TAFL-Coursework" class="project-link" target="_blank">
+                            Посмотреть на GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="project-card">
+                        <h3>Laboratoriya-4-react</h3>
+                        <p>Простая лабораторная работа для изучения основ React.</p>
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>CSS</span>
+                        </div>
+                        <a href="https://github.com/AbdullaArzimurotov/laboratoriya-4-react" class="project-link" target="_blank">
+                            Посмотреть на GitHub <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                    <!-- Yangi loyihalaringni shu yerga qo'shib borasan -->
+                </div>
+            </section>
+
+             <!-- 5. TA'LIM QISMI -->
+             <section class="card">
+                <h2><i class="fas fa-graduation-cap"></i> Образование</h2>
+                <p>
+                    <strong>Университет:</strong> Муромский институт (филиал) Владимирского государственного университета<br>
+                    <strong>Направление:</strong> Программная инженерия<br>
+                    <strong>Курс:</strong> 3
+                </p>
+            </section>
+        </main>
+    </div>
 
     <footer>
-        <p>Свяжитесь со мной: aarzimurotov2001@gmail.com</p>
+        <p>&copy; 2024 Абдулла Арзимуротов. Все права защищены.</p>
     </footer>
 
 </body>
