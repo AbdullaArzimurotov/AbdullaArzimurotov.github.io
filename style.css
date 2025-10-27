@@ -1,50 +1,170 @@
+/* --- Global sozlamalar --- */
+:root {
+    --primary-color: #007BFF; /* Asosiy rang (ko'k) */
+    --background-color: #f4f7f6; /* Orqa fon rangi */
+    --card-background: #ffffff; /* Kartochkalar rangi */
+    --text-color: #333; /* Matn rangi */
+    --light-text-color: #777;
+    --border-color: #e0e0e0;
+    --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0 auto;
-    max-width: 800px;
-    padding: 2em;
-    background-color: #f9f9f9;
-    color: #333;
-}
-
-header {
-    background-color: #ffffff;
-    padding: 1.5em;
-    border-radius: 8px;
-    margin-bottom: 2em;
-    text-align: center;
-    border: 1px solid #ddd;
-}
-
-h1 {
+    font-family: 'Poppins', sans-serif; /* Chiroyli shrift */
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
-    color: #0056b3;
+    padding: 2em;
 }
 
-h2 {
-    border-bottom: 2px solid #0056b3;
-    padding-bottom: 0.3em;
+.container {
+    max-width: 900px;
+    margin: 0 auto;
 }
 
-main section {
-    background-color: #ffffff;
-    padding: 1.5em;
-    border-radius: 8px;
+/* --- Bosh qism (Profil) --- */
+.profile {
+    text-align: center;
+    background: var(--card-background);
+    padding: 2.5em;
+    border-radius: 12px;
+    margin-bottom: 2em;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Rasmning chetlarini yumaloq qilish */
+    border: 5px solid var(--primary-color);
     margin-bottom: 1em;
-    border: 1px solid #ddd;
 }
 
-ul {
-    padding-left: 20px;
+.profile h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--primary-color);
 }
 
-li {
-    margin-bottom: 0.5em;
+.profile-title {
+    font-size: 1.2em;
+    color: var(--light-text-color);
+    font-weight: 300;
 }
 
+.social-links {
+    margin-top: 1em;
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 1.8em;
+    margin: 0 0.5em;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+    transform: scale(1.2); /* Ikonkani kattalashtirish effekti */
+}
+
+/* --- Umumiy kartochka stili --- */
+.card {
+    background: var(--card-background);
+    padding: 2em;
+    border-radius: 12px;
+    margin-bottom: 2em;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.card h2 {
+    margin-top: 0;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+}
+
+.card h2 i {
+    margin-right: 0.5em;
+    color: var(--primary-color);
+}
+
+/* --- Ko'nikmalar (Skills) bloki --- */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Elementlar orasidagi masofa */
+}
+
+.skills-grid span {
+    background-color: #eef7ff;
+    color: var(--primary-color);
+    padding: 0.5em 1em;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+/* --- Loyihalar (Projects) bloki --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsiv ustunlar */
+    gap: 1.5em;
+}
+
+.project-card {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px); /* Kartochkani ko'tarish effekti */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+
+.project-tags {
+    margin: 1em 0;
+}
+
+.project-tags span {
+    background-color: #f0f0f0;
+    font-size: 0.8em;
+    padding: 0.3em 0.8em;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.project-link {
+    margin-top: auto; /* Havolani pastga yopishtirish */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.project-link i {
+    transition: transform 0.3s ease;
+}
+
+.project-link:hover i {
+    transform: translateX(5px); /* Strelkani siljitish effekti */
+}
+
+/* --- Footer --- */
 footer {
     text-align: center;
-    margin-top: 2em;
-    color: #777;
+    color: var(--light-text-color);
+    padding: 1em 0;
 }
